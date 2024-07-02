@@ -21,8 +21,6 @@ import io.github.shampooshrek.reddit.exceptions.InvalidValueException;
 import io.github.shampooshrek.reddit.models.ApiResponse;
 import io.github.shampooshrek.reddit.models.User;
 import io.github.shampooshrek.reddit.models.UserImage;
-import io.github.shampooshrek.reddit.models.dto.LoginData;
-import io.github.shampooshrek.reddit.models.dto.LoginResponse;
 import io.github.shampooshrek.reddit.models.dto.RegisterDto;
 import io.github.shampooshrek.reddit.models.dto.UserDto;
 import io.github.shampooshrek.reddit.services.UserService;

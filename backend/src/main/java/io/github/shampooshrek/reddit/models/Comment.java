@@ -16,8 +16,6 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
-import jakarta.persistence.Column;
-
 @Entity
 @Table(name = "comments")
 public class Comment {

@@ -29,7 +29,6 @@ public class ImageService {
     try {
       Files.createDirectories(this.fileStorageLocation);
     } catch (Exception e) {
-      throw new RuntimeException("Could not create the directory where the uploaded files will be stored.", e);
     }
   }
 
@@ -39,11 +38,11 @@ public class ImageService {
     String originalFileName = StringUtils.cleanPath(file.getOriginalFilename());
     try {
       if (!mimetypes.contains(file.getContentType())) {
-        throw new RuntimeException("Mimetype não permetido, apenas jpeg ou png");
+        throw new RuntimeException("Mimetype não permetido!");
       }
 
       if (originalFileName.contains("..")) {
-        throw new RuntimeException("Sorry! Filename contains invalid path sequence " + originalFileName);
+        throw new RuntimeException("Nome de arquivo não permitido! " + originalFileName);
       }
 
       String fileName = formatterFileName(originalFileName);
@@ -55,7 +54,7 @@ public class ImageService {
 
       return image;
     } catch (IOException e) {
-      throw new RuntimeException("Could not store file " + originalFileName + ". Please try again!", e);
+      throw new RuntimeException();
     }
   }
 
